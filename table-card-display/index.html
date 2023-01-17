@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+    <script src="./script.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <form id="userInputs">
+        <!-- The for attribute is to get the ID of the input element -->
+        <label>Name:</label><br>
+        <input type="text" name="name"><br>
+
+        <!-- What does this for do? -->
+        <label>Age:</label><br>
+        <input type="number" min="0" name="age"><br><br>
+        <input type="submit" value="Submit" onclick="submitUser()">
+      </form>
+
+    </div>
+
+    <div>
+      <button onclick="switchCardView()">Card View</button>
+      <button onclick="switchTableView()">Table View</button>
+    </div>
+
+    <div>
+      <table id="userTable">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Id</th>
+        </tr>
+      </table>
+    </div>
+
+    <div id="userCards">
+    </div>
+  </body>
+
+  <style>
+    /* 
+		Don't know what does this do, but with out this, the table
+		showing differently, all the cells are broken
+		 */
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+    }
+
+    #userCards>div {
+      max-width: 300px;
+      border: 1px solid black;
+      margin: 2rem
+    }
+  </style>
+
+</html>
